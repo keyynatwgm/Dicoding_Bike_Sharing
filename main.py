@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
     with st.expander('Note'):
       st.write(
-        """"
+        """
         `Clear`: Cuaca cerah
         `Mist + Cloudy`: Berkabut dan berawan 
         `Light Snow`: Sedikit bersalju   

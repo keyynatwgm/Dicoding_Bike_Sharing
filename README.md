@@ -50,4 +50,3 @@ The steps to create your virtual environment from this project is as follows:
    ```
 
 6. Stop the application program by `ctrl + c`.
-](https://dicodingbikesharing-dd2qn5d9wmc2fbywzct73y.streamlit.app/)https://dicodingbikesharing-dd2qn5d9wmc2fbywzct73y.streamlit.app/

@@ -1,20 +1,11 @@
-"""
-Author: Kezia Natalia
-Date: 04/03/2024
-This is the function.py module.
-Usage:
-- Initiate all functions for streamlit dashboard
-"""
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 plt.style.use('dark_background')
 
-
 def create_df_yr(df):
-  """Initialize the function to get the year DataFrame"""
+  #the function to get the year DataFrame
   df_year = df.groupby('year').instant.nunique().reset_index()
   df_year.rename(
     columns={
@@ -27,7 +18,7 @@ def create_df_yr(df):
 
 
 def create_df_holiday(df):
-  """Initialize the function to get the holiday DataFrame"""
+  #the function to get the holiday DataFrame
   df_holiday = df.groupby('holiday').instant.nunique().reset_index()
   df_holiday.rename(
     columns={
@@ -40,7 +31,7 @@ def create_df_holiday(df):
 
 
 def create_df_working_day(df):
-  """Initialize the function to get the working day DataFrame"""
+  #the function to get the working day DataFrame
   df_workingday = df.groupby('workingday').instant.nunique().reset_index()
   df_workingday.rename(
     columns={
@@ -53,7 +44,7 @@ def create_df_working_day(df):
 
 
 def create_df_weathercond(df):
-  """Initialize the function to get the weathersit DataFrame"""
+  #the function to get the weathersit DataFrame
   df_weathercond = df.groupby('weather_condition').instant.nunique().reset_index()
   df_weathercond.rename(
     columns={
@@ -65,7 +56,7 @@ def create_df_weathercond(df):
   return df_weathercond
 
 def create_df_season(df):
-  """Initialize the function to get the season DataFrame"""
+  #the function to get the season DataFrame
   df_season = df.groupby('season').instant.nunique().reset_index()
   df_season.rename(
     columns={
@@ -77,7 +68,7 @@ def create_df_season(df):
   return df_season
 
 def sidebar(df):
-  """Initialize the function to create sidebar"""
+  #the function to create sidebar"""
   df['date'] = pd.to_datetime(df['date'])
   min_date = df['date'].min()
   max_date = df['date'].max()
@@ -100,7 +91,7 @@ def sidebar(df):
 
 
 def year(df):
-  """Initialize the function to create year plot"""
+  #the function to create totals of bike sharing by year
   st.subheader('Year')
 
   fig, ax = plt.subplots(figsize=(20, 12.6))
@@ -130,7 +121,7 @@ def year(df):
 
 
 def month(df):
-  """Initialize the function to create month plot"""
+  #the function to create totals of bike sharing by month
   st.subheader('Month')
 
   fig, ax = plt.subplots(figsize=(20, 12))
@@ -160,7 +151,7 @@ def month(df):
 
 
 def hour(df):
-  """Initialize the function to create hour plot"""
+  #the function to create totals of bike sharing by hour
   st.subheader('Hour')
 
   fig, ax = plt.subplots(figsize=(20, 12))
@@ -190,7 +181,7 @@ def hour(df):
 
 
 def holiday(df):
-  """Initialize the function to create holiday plot"""
+  #the function to create totals of bike sharing by holiday
   st.write('Holiday')
 
   fig, ax = plt.subplots(figsize=(16, 18))
@@ -219,7 +210,7 @@ def holiday(df):
 
 
 def working_day(df):
-  """Initialize the function to create working day plot"""
+  #the function to create totals of bike sharing by workingday
   st.write('Working Day')
 
   fig, ax = plt.subplots(figsize=(16, 18))
@@ -248,7 +239,7 @@ def working_day(df):
 
 
 def weathercond(df):
-  """Initialize the function to create weathersit plot"""
+  #the function to create totals of bike sharing by weather condition
   st.subheader('Weather Condition')
 
   fig, ax = plt.subplots(figsize=(20, 10))
@@ -278,7 +269,7 @@ def weathercond(df):
 
 
 def season(df):
-  """Initialize the function to create season plot"""
+  #the function to create totals of bike sharing by season
   st.subheader('Season')
 
   fig, ax = plt.subplots(figsize=(20, 10))

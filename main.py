@@ -1,10 +1,4 @@
-"""
-Author: Kezia Natalia
-Date: 04/03/2023
-This is the main.py module.
-Usage:
-- Main streamlit file dan run the streamlit dashboard
-"""
+#main.py : file to run streamlit dashboard
 
 import datetime
 import pandas as pd
@@ -88,10 +82,10 @@ if __name__ == '__main__':
 
     with st.expander('Note'):
       st.write(
-        """
-        `Mist + Cloudy`: Berkabut dan berawan  
-        `Light Snow`: Sedikit bersalju  
+        """"
         `Clear`: Cuaca cerah
+        `Mist + Cloudy`: Berkabut dan berawan 
+        `Light Snow`: Sedikit bersalju   
         """
       )
 
@@ -102,10 +96,10 @@ if __name__ == '__main__':
     with st.expander('Note'):
       st.write(
         """
-        `Winter`: Musim Dingin  
-        `Summer`: Musim Panas  
-        `Spring`: Musim Semi  
+        `Spring`: Musim Semi
+        `Summer`: Musim Panas   
         `Fall`: Musim Gugur
+        `Winter`: Musim Dingin
         """
       )
 

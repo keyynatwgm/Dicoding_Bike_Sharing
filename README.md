@@ -29,24 +29,14 @@ The steps to create your virtual environment from this project is as follows:
    git clone https://github.com/keyynatwgm/Dicoding_bike_sharing.git
    ```
 
-2. Create Python Virtual Environment
-   ```bash
-   virtualenv venv
-   ```
-
-2. Activate the Environment
-   ```bash
-   venv\Scripts\activate
-   ```
-
-4. Install All the Requirements Inside "requirements.txt"
+2. Install All the Requirements Inside "requirements.txt"
    ```bash
    pip install -r requirements.txt
    ```
 
-5. Run the Streamlit Dashboard
+3. Run the Streamlit Dashboard
    ```bash
    streamlit run main.py
    ```
 
-6. Stop the application program by `ctrl + c`.
+4. Stop the application program by `ctrl + c`.
